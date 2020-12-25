@@ -1,6 +1,3 @@
-import 'package:job_search_ui/utils/utils.dart';
-import 'package:job_search_ui/widgets/widgets.dart';
-
 import 'screens.dart';
 
 class Home extends StatefulWidget {
@@ -30,7 +27,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             SliverToBoxAdapter(
-              // child: UserDetailCards(user: user),
+              child: UserDetailsCards(user: user),
             )
           ],
         ),
