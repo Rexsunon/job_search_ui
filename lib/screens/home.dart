@@ -19,15 +19,21 @@ class _HomeState extends State<Home> {
         preferredSize: Size(screenSize.width, 50.0),
         child: JsAppBar(icon: Icons.menu),
       ),
-      body: CustomScrollView(
-        slivers: [
-          SliverPadding(
-            padding: EdgeInsets.symmetric(vertical: 35.0, horizontal: 16.0),
-            sliver: SliverToBoxAdapter(
-              child: MainHeaderText(text: "Your Profile"),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: CustomScrollView(
+          slivers: [
+            SliverPadding(
+              padding: EdgeInsets.symmetric(vertical: 35.0),
+              sliver: SliverToBoxAdapter(
+                child: MainHeaderText(text: "Your Profile"),
+              ),
             ),
-          )
-        ],
+            SliverToBoxAdapter(
+              // child: UserDetailCards(user: user),
+            )
+          ],
+        ),
       ),
     );
   }
