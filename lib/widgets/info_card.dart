@@ -6,18 +6,26 @@ class InfoCard extends StatelessWidget {
   final double width;
   final double height;
   final Widget child;
+  final Color color;
+  final double radius;
 
-  const InfoCard({Key key, @required this.width, @required this.height, @required this.child}) : super(key: key);
+  const InfoCard({
+    Key key,
+    @required this.width,
+    @required this.height,
+    @required this.child,
+    this.color = Colors.white,
+    this.radius = 30.0
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
       height: height,
-      padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(radius)),
+        color: color,
       ),
       child: child,
     );

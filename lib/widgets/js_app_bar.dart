@@ -4,8 +4,9 @@ class JsAppBar extends StatelessWidget {
   final IconData icon;
   final double width;
   final double height;
+  final Color color;
 
-  const JsAppBar({ Key key, @required this.icon, this.width = 50.0, this.height = 50.0 }) : super(key: key);
+  const JsAppBar({ Key key, @required this.icon, this.width = 50.0, this.height = 50.0, this.color = Colors.white }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class JsAppBar extends StatelessWidget {
               height: height,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(18.0)),
-                color: Colors.white,
+                color: color,
               ),
               child: Center(
                 child: Icon(icon, size: 18.0),

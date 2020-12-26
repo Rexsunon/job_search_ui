@@ -1,3 +1,5 @@
+import 'package:job_search_ui/utils/utils.dart';
+
 import 'screens.dart';
 
 class Home extends StatefulWidget {
@@ -28,7 +30,11 @@ class _HomeState extends State<Home> {
             ),
             SliverToBoxAdapter(
               child: UserDetailsCards(user: user),
-            )
+            ),
+            SliverPadding(padding: EdgeInsets.symmetric(vertical: 27.0),
+            sliver: SliverToBoxAdapter(
+              child: JobApplicationCard(offer: jobOffer),
+            ),)
           ],
         ),
       ),
