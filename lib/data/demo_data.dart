@@ -15,3 +15,24 @@ final jobOffer = JobOffer(
   startDate: "Aug 28",
   salary: "\$ 130k",
 );
+
+final jobApplications = [
+  JobApplication(
+    companyName: "Apple Ink.",
+    logo: Assets.apple,
+    position: "Product Designer",
+    salary: "\$140k",
+  ),
+  JobApplication(
+    companyName: "Microsoft",
+    logo: Assets.microsoft,
+    position: "Visual Designer",
+    salary: "\$120k",
+  ),
+  JobApplication(
+    companyName: "Netflix",
+    logo: Assets.netflix,
+    position: "Project Manager",
+    salary: "\$200k",
+  ),
+];
